@@ -23,7 +23,8 @@ def main():
         else:
             print("'"+answer + "'" + " is wrong answer ;(. Correct answer was " + "'" + correct(num)+"'")
             break
-    print('Congratulations ' + name)
+    if counter == 3:
+        print('Congratulations ' + name)
 
 
 if __name__ == '__main__':
