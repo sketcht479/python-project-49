@@ -1,30 +1,25 @@
-import prompt
 from random import randint
 from brain_games.cli import welcome_user
-
-
-def correct(number):
-    if number % 2 == 0:
-        return 'yes'
-    else:
-        return 'no'
+from brain_games.cli import basegame
 
 
 def main():
     name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no". ')
+    sinopsis = 'Answer "yes" if the number is even, otherwise answer "no".'
     counter = 0
+    print(sinopsis)
     while counter < 3:
-        num = randint(0, 100)
-        answer = prompt.string('Question:' + str(num) + ' ')
-        if answer == correct(num):
-            print('Correct!')
+        question = randint(0, 100)
+        if question % 2 == 0:
+            correct_answer = 'yes'
+        else:
+            correct_answer = 'no'
+        if basegame(correct_answer, question, name) == 0:
             counter += 1
         else:
-            print("'"+answer + "'" + " is wrong answer ;(. Correct answer was " + "'" + correct(num)+"'")
             break
     if counter == 3:
-        print('Congratulations ' + name)
+        print('Congratulations, ' + name)
 
 
 if __name__ == '__main__':
