@@ -16,6 +16,8 @@ def main():
             divisions = [i for i in range(2, 10)]
 
         correct_answer = 'yes'
+        if number == 1:
+            correct_answer = 'no'
         for i in divisions:
             if number % i == 0:
                 correct_answer = 'no'
