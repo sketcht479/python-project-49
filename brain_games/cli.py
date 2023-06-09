@@ -16,4 +16,4 @@ def basegame(correct_answer, question, name):
         return 0
     else:
         print("'{}' is wrong answer ;(. Correct answer was '{}' "
-              "Let's try again {}!".format(user_answer, correct_answer, name))
+              "Let's try again, {}!".format(user_answer, correct_answer, name))
