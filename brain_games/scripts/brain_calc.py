@@ -13,7 +13,7 @@ def main():
         num2 = random.randint(0, 10)
         list_op = ['+', '-', '*']
         op = random.choice(list_op)
-        question = str(num1) + op + str(num2)
+        question = "{} {} {}".format(num1, op, num2)
         match op:
             case '+':
                 correct_answer = str(num1 + num2)
