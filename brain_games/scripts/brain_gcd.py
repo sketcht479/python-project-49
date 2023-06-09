@@ -2,6 +2,7 @@ import random
 from brain_games.cli import welcome_user
 from brain_games.cli import basegame
 
+
 def nod(n1, n2):
     if n1 < n2:
         n1, n2 = n2, n1

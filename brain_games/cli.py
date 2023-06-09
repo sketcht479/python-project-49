@@ -15,4 +15,5 @@ def basegame(correct_answer, question, name):
         print('Correct!')
         return 0
     else:
-        print("'" + user_answer + "'" + " is wrong answer ;(. Correct answer was " + "'" + correct_answer + "'" + " Let's try again " + name + '!')
+        print("'{}' is wrong answer ;(. Correct answer was '{}' "
+              "Let's try again {}!".format(user_answer, correct_answer, name))
