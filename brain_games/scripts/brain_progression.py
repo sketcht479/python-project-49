@@ -15,8 +15,12 @@ def main():
         progression = [i for i in range(start, start + step * lenght, step)]
         correct_answer = random.choice(progression)
         progression[progression.index(correct_answer)] = '..'
+        progression_str = ''
+        for i in progression:
+            progression_str += ' ' + str(i)
+        progression_str = progression_str.strip()
 
-        if basegame(str(correct_answer), progression, name) == 0:
+        if basegame(str(correct_answer), progression_str, name) == 0:
             counter += 1
         else:
             break
