@@ -21,7 +21,7 @@ def main():
         else:
             break
     if counter == 3:
-        print('Congratulations, ' + name)
+        print("Congratulations, {}!".format(name))
 
 
 if __name__ == '__main__':
